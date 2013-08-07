@@ -59,13 +59,13 @@ void accept_incoming(int listen_sock, int epoll_fd){
     
     int client = accept(listen_sock,  (struct sockaddr *) &clientaddr, &clientlen);
     if(client < 0){
+
+        printf("pid:%d",getpid());
         perror("!accept");
         return;
     }
 
-    #ifdef DEBUG
-        printf("accept %s:%d, sock_fd is %d\n", inet_ntoa(clientaddr.sin_addr), ntohs(clientaddr.sin_port), conn_sock);
-    #endif
+    printf("accept %s:%d, sock_fd is %d pid:%d\n", inet_ntoa(clientaddr.sin_addr), ntohs(clientaddr.sin_port), conn_sock, getpid());
     
     make_socket_non_blocking(client);
     
