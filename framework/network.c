@@ -78,8 +78,8 @@ void accept_incoming(int listen_sock, int epoll_fd){
 }
 
 
-void close_and_clean(int epollfd) {
-    close(epollfd);
+void close_and_clean(int fd) {
+    close(fd);
 }
 
 int read_all(int fd,char *buf){
