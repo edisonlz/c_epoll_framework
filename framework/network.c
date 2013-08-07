@@ -65,7 +65,7 @@ void accept_incoming(int listen_sock, int epoll_fd){
         return;
     }
 
-    printf("accept %s:%d, sock_fd is %d pid:%d\n", inet_ntoa(clientaddr.sin_addr), ntohs(clientaddr.sin_port), conn_sock, getpid());
+    printf("accept %s:%d, sock_fd is %d pid:%d\n", inet_ntoa(clientaddr.sin_addr), ntohs(clientaddr.sin_port), listen_sock, getpid());
     
     make_socket_non_blocking(client);
     
