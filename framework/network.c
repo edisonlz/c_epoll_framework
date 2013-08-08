@@ -89,6 +89,8 @@ int read_all(int fd,char *buf){
     while ((count = read(fd, buf + n, sizeof buf)) > 0) {
         n += count;
     }
+    
+    buf[n] = '\0';
     return n;
 }
 

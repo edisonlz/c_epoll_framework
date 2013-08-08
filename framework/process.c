@@ -16,7 +16,6 @@ int shart_child(int i){
     }else{
         //in parent
 
-
         printf("parent fork child pid %d %d c:%d\n", pid,i,getpid());
         return 0;
     }
