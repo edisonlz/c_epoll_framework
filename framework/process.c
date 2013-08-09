@@ -38,5 +38,7 @@ void fork_processes(int number){
     pid_t  ex_pid = wait(&status);
     
     printf("exit pid:%d status:%d\n", ex_pid, status);
+
+    exit(EXIT_FAILURE);
 }
 
