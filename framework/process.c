@@ -1,6 +1,6 @@
 #include "process.h"
 
-
+/*https://www.cnblogs.com/king-77024128/articles/2684317.html*/
 int shart_child(int i){
 
     pid_t pid;
